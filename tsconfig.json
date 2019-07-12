@@ -10,7 +10,7 @@
         "skipLibCheck": true,
         // "strictNullChecks": true,
         "emitDecoratorMetadata": true,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
     },
     "include": [
         "src/**/*"

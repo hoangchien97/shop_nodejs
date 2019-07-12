@@ -26,8 +26,15 @@
   "homepage": "https://github.com/hoangchien97/shop_nodejs#readme",
   "dependencies": {
     "@types/express": "^4.17.0",
+    "@types/sequelize": "^4.28.3",
+    "config": "^3.2.0",
     "ejs": "^2.6.2",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.3",
+    "reflect-metadata": "^0.1.13",
+    "sequelize": "^5.10.0",
+    "sequelize-typescript": "^0.6.11"
   },
   "devDependencies": {
     "@types/fs-extra": "^8.0.0",

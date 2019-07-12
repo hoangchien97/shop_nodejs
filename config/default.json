@@ -1,0 +1,13 @@
+{
+    "database": {
+        "url": "postgres://hoangchien:123456@127.0.0.1:5432/shop",
+        "logging": false
+    },
+    
+    "cors": {
+        "origin": "*",
+        "methods": "GET,HEAD,PUT,POST,DELETE",
+        "preflightContinue": false,
+        "optionsSuccessStatus": 204
+    }
+}
