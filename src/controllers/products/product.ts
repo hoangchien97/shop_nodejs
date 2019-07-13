@@ -8,7 +8,11 @@ productRouter.get("/", asyncMiddleware(getProducts));
 
 async function getProducts(req: express.Request, res: express.Response) {
     const products = await ProductModel.findAndCountAll();
-    return res.json(products);
+    // return res.json(products);
+    res.render("products/index", {
+        title: "Danh sách sản phẩm",
+        products: products
+    });
 }
 
 
