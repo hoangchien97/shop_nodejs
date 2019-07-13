@@ -2,6 +2,7 @@ import express from "express";
 import path from "path";
 import { start } from "./start-server";
 import { NextFunction } from "connect";
+import { apiRouter } from "./controllers";
 
 start().catch();
 const app = express();
@@ -12,9 +13,11 @@ app.set("port", process.env.PORT || 3000);
 app.set( "views", path.join( __dirname, "views" ) );
 app.set( "view engine", "ejs" );
 
+app.use("/api", apiRouter);
+
 app.get( "/", ( req, res ) => {
     // render the index template
-    res.render( "index" );
+    res.render("index");
 } );
 app.use((err: Error, _req: express.Request, res: express.Response, _next: NextFunction) => {
     console.error(err);

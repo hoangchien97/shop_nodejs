@@ -18,9 +18,11 @@ sequelize.authenticate().then(() => {
   console.log("Unable to connect to the database", err);
 });
 
-const initDatabaseModels = () => {
-  sequelize.addModels(models);
+const initDatabaseModels = async () => {
+  await sequelize.addModels(models);
+  await sequelize.sync();
   console.log("Sequelize models initiated");
+  return sequelize;
 };
 
 export { initDatabaseModels, sequelize, models };

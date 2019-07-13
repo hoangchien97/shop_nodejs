@@ -1,0 +1,14 @@
+{
+    "database": {
+      "url": "postgres://postgres:example@db:5432/shop" 
+    },
+    "cors": {
+      "origin": "*",
+      "methods": "GET,HEAD,PUT,POST,DELETE",
+      "preflightContinue": false,
+      "optionsSuccessStatus": 204
+    },
+    "queue": {
+      "redis": "redis://redis:6379/1"
+    }
+  }
